@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Majors>
+  <Major ID="1" MajorName="软件技术" DeptId="1">软件技术</Major>
+  <Major ID="2" MajorName="计算机信息管理" DeptId="1">计算机信息管理</Major>
+  <Major ID="3" MajorName="计算机网络技术" DeptId="1">计算机网络技术</Major>
+  <Major ID="4" MajorName="云计算技术及应用" DeptId="1">云计算技术及应用</Major>
+  <Major ID="5" MajorName="电子竞技运动与管理" DeptId="1">电子竞技运动与管理</Major>
+  <Major ID="6" MajorName="动漫制作技术" DeptId="1">动漫制作技术</Major>
+  <Major ID="7" MajorName="室内艺术设计" DeptId="1">室内艺术设计</Major>
+  <Major ID="8" MajorName="广告设计与制作" DeptId="1">广告设计与制作</Major>
+  <Major ID="9" MajorName="数字媒体艺术设计" DeptId="1">数字媒体艺术设计</Major>
+  <Major ID="10" MajorName="电脑艺术设计" DeptId="1">电脑艺术设计</Major>
+  <Major ID="11" MajorName="智能控制技术" DeptId="2">智能控制技术</Major>
+  <Major ID="12" MajorName="新能源汽车技术" DeptId="2">新能源汽车技术</Major>
+  <Major ID="13" MajorName="汽车检测与维修" DeptId="2">汽车检测与维修</Major>
+  <Major ID="14" MajorName="建筑智能化工程技术" DeptId="2">建筑智能化工程技术</Major>
+  <Major ID="15" MajorName="机械设计与制造" DeptId="2">机械设计与制造</Major>
+  <Major ID="16" MajorName="物联网应用技术" DeptId="2">物联网应用技术</Major>
+  <Major ID="17" MajorName="移动通信技术" DeptId="2">移动通信技术</Major>
+  <Major ID="18" MajorName="电子信息工程技术" DeptId="2">电子信息工程技术</Major>
+  <Major ID="19" MajorName="物流信息技术" DeptId="3">物流信息技术</Major>
+  <Major ID="20" MajorName="电子商务" DeptId="3">电子商务</Major>
+  <Major ID="21" MajorName="统计与会计核算" DeptId="3">统计与会计核算</Major>
+  <Major ID="22" MajorName="国际商务" DeptId="3">国际商务</Major>
+  <Major ID="23" MajorName="酒店管理" DeptId="3">酒店管理</Major>
+  <Major ID="24" MajorName="连锁经营管理" DeptId="3">连锁经营管理</Major>
+  <Major ID="25" MajorName="旅游英语" DeptId="3">旅游英语</Major>
+  <Major ID="26" MajorName="市场营销" DeptId="3">市场营销</Major>
+  <Major ID="27" MajorName="社区康复" DeptId="3">社区康复</Major>
+  <Major ID="28" MajorName="商务英语" DeptId="4">商务英语</Major>
+  <Major ID="29" MajorName="摄影摄像" DeptId="4">摄影摄像</Major>
+  <Major ID="30" MajorName="音乐舞蹈" DeptId="4">音乐舞蹈</Major>
+</Majors>

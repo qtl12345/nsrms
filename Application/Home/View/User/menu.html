@@ -1,0 +1,209 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/seat.css"/>
+<style>
+    .dialog-button {
+        text-align: center;
+    }
+    .menu_table {
+        margin: 15px auto;
+    }
+    .menu_table tr {
+        line-height: 45px;
+    }
+</style>
+<include file="./Application/Home/View/Public/include.html" />
+<div class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'center',border:false">
+        <!-- Begin of toolbar -->
+        <div id="menu-toolbar">
+            <div class="wu-toolbar-button">
+                <a href="#" class="easyui-linkbutton" iconCls="icon-reload" onclick="refreshMenuGrid()"
+                   plain="true">刷新</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-back" onclick="removeTab()" plain="true">返回</a>
+            </div>
+        </div>
+        <!-- End of toolbar -->
+        <table class="easyui-treegrid" title="系统菜单" id="menu-treegrid">
+        </table>
+    </div>
+</div>
+<!-- Begin of easyui-dialog -->
+<div id="menu-dialog" class="easyui-dialog" data-options="closed:true,iconCls:'icon-save'"
+     style="width:600px; padding:10px;">
+    <form id="menu-form" method="post">
+        <table class="menu_table" style="width:65%;">
+            <tr>
+                <td width="80">菜单名称:</td>
+                <td><input type="text" name="edit_menuname" class="easyui-textbox" style="width:240px;height:25px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td width="80">模块:</td>
+                <td><input type="text" name="edit_module" class="easyui-textbox" style="width:240px;height:25px;"/></td>
+            </tr>
+            <tr>
+                <td width="80">模块说明:</td>
+                <td><input type="text" name="edit_module_cn" class="easyui-textbox" style="width:240px;height:25px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td width="80">控制器:</td>
+                <td><input type="text" name="edit_controller" class="easyui-textbox" style="width:240px;height:25px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td width="80">控制器说明:</td>
+                <td><input type="text" name="edit_controller_cn" class="easyui-textbox"
+                           style="width:160px;height:25px;"/></td>
+            </tr>
+            <tr>
+                <td width="80">方法:</td>
+                <td><input type="text" name="edit_method" class="easyui-textbox" style="width:240px;height:25px;"/></td>
+            </tr>
+            <tr>
+                <td width="80">方法说明:</td>
+                <td><input type="text" name="edit_method_cn" class="easyui-textbox" style="width:240px;height:25px;"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<!-- End of easyui-dialog -->
+<script>
+    var menuId = -1;
+    $(function () {
+        $('#menu-treegrid').treegrid({
+//            url: getMenuListByPageUrl,
+            idField: 'id',
+            treeField: 'auth_name',
+            rownumbers: true,
+            fitColumns: true,
+            fit: true,
+            singleSelect: true,
+            columns: [[
+                {field: 'id', title: 'ID', align: 'center', width: 40, hidden: 'true'},
+                {field: '_parentId', title: 'PID', hidden: 'true'},
+                {field: 'auth_name', title: '菜单名称', width: 180, align: 'center'},
+                {field: 'auth_type', title: '菜单类型', width: 80, align: 'center'},
+                {field: 'module_cn', title: '模块', width: 90, align: 'center'},
+                {field: 'module', title: '模块', align: 'center', hidden: 'true'},
+                {field: 'controller_cn', title: '控制器', align: 'center', width: 70},
+                {field: 'controller', title: '控制器', hidden: 'true'},
+                {field: 'method_cn', title: '方法', align: 'center', width: 100},
+                {field: 'method', title: '方法', hidden: 'true'},
+                {field: 'url', title: '链接', align: 'center', width: 240},
+                {field: 'operation', title: '操作', width: 60, align: 'center', formatter: showMenuOptBtn}
+            ]],
+            onBeforeLoad: function (row, param) {
+                console.log(row);
+                if (!row) {
+                    param.id = 0;
+                }
+            },
+            onLoadSuccess: function (data) {
+                delete $(this).treegrid('options').queryParams['id'];
+                $("a[name='editMenu']").linkbutton({plain: true, iconCls: 'icon-edit'});
+            },
+            toolbar: '#menu-toolbar'
+        });
+    });
+
+    function showMenuOptBtn(value, row) {
+        return "<a href='#' onclick='editMenu(" + row['id'] + ")' class='easyui-linkbutton' id='editMenu' name='editMenu'>编辑</a>"
+    }
+
+    function refreshMenuGrid() {
+        $('#menu-treegrid').treegrid('reload');
+    }
+
+    function editMenu(id) {
+        selectNode = $('#menu-treegrid').treegrid('getSelections');
+        if (selectNode.length == 0){
+            return;
+        }
+        if (selectNode[0].id == id){
+            menuId = id;
+            $('#menu-form').form('clear');
+            $('input[textboxname=edit_menuname]').textbox('setValue',selectNode[0].auth_name);
+            $('input[textboxname=edit_module]').textbox('setValue',selectNode[0].module);
+            $('input[textboxname=edit_module_cn]').textbox('setValue',selectNode[0].module_cn);
+            $('input[textboxname=edit_controller]').textbox('setValue',selectNode[0].controller);
+            $('input[textboxname=edit_controller_cn]').textbox('setValue',selectNode[0].controller_cn);
+            $('input[textboxname=edit_method]').textbox('setValue',selectNode[0].method);
+            $('input[textboxname=edit_method_cn]').textbox('setValue',selectNode[0].method_cn);
+            $('#menu-dialog').dialog({
+                closed: false,
+                modal: true,
+                top: 30,
+                title: "修改菜单",
+                buttons: [{
+                    text: '确定',
+                    iconCls: 'icon-ok',
+                    handler: doEditMenu
+                }, {
+                    text: '取消',
+                    iconCls: 'icon-cancel',
+                    handler: function () {
+                        $('#menu-dialog').dialog('close');
+                    }
+                }]
+            });
+        }
+    }
+
+    function doEditMenu() {
+        if($.trim($('input[textboxname=edit_menuname]').textbox('getValue'))==""){
+            $.messager.show({
+                title:'系统提示',
+                msg:"用户名没有填写"
+            });
+            $('input[textboxname=edit_menuname]').textbox().next('span').find('input').focus();
+            return;
+        }
+        var menumsg,isExistMenu;
+        $.ajax({
+            url: checkMenuNameUrl,
+            type: "post",
+            async: false,
+            dataType: "json",
+            data: 'id='+menuId+'&menuname=' + $.trim($('input[textboxname=edit_menuname]').textbox('getValue')),
+            success: function (result) {
+                menumsg = result.msg;
+                isExistMenu = result.isExist;
+            }, error: function () {
+            }
+        });
+        if(isExistMenu){
+            $.messager.show({
+                title:'系统提示',
+                msg:menumsg
+            });
+            $('input[textboxname=edit_menuname]').textbox().next('span').find('input').focus();
+            return;
+        }
+        $("#menu-form").ajaxSubmit({
+            url: doEditMenuUrl,
+            type: "post",
+            dataType: "json",
+            beforeSubmit: function (arr, $form, options) {
+                arr.push({'name':'id','value':menuId,'type':'hidden','required':false});
+            },
+            //提交成功后的回调函数
+            success: function (result, status, xhr, $form) {
+                $.messager.show({
+                    title:'系统提示',
+                    msg:result.msg,
+                    timeout:500,
+                    showType:'slide'
+                });
+                if(result.errorCode == 0){
+                    $('#menu-treegrid').treegrid('reload');
+                    $('#menu-dialog').dialog('close');
+                }
+            },
+            error: function (xhr, status, error, $form) {
+            },
+            complete: function (xhr, status, $form) {
+            }
+        });
+    }
+</script>

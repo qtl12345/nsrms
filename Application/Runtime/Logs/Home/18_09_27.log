@@ -1,0 +1,888 @@
+[ 2018-09-27T15:21:47+08:00 ] ::1 /Nsrms/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000314s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002289s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001501s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002547s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021699s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002255s ]
+
+[ 2018-09-27T15:21:47+08:00 ] ::1 /Nsrms/Home/Login/veryimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000163s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003619s ]
+
+[ 2018-09-27T15:21:54+08:00 ] ::1 /Nsrms/Home/Login/loginset
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000183s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002345s ]
+SQL: SHOW COLUMNS FROM `manager` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `manager` WHERE ( user_name='admin' ) LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000537s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001778s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001681s ]
+
+[ 2018-09-27T15:21:58+08:00 ] ::1 /Nsrms/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000376s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001158s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002634s ]
+
+[ 2018-09-27T15:21:58+08:00 ] ::1 /Nsrms/Home/Login/veryimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000243s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003538s ]
+
+[ 2018-09-27T15:22:04+08:00 ] ::1 /Nsrms/Home/Login/loginset
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000291s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001909s ]
+SQL: SHOW COLUMNS FROM `manager` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `manager` WHERE ( user_name='admin' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `manager` SET `logintime`='2018-09-27 15:22',`loginip`='127.0.0.1' WHERE ( user_name='admin' ) [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000359s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002465s ]
+
+[ 2018-09-27T15:22:06+08:00 ] ::1 /Nsrms/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000323s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001797s ]
+SQL: SHOW COLUMNS FROM `manager` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `manager` WHERE ( user_name='admin' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `role` WHERE ( user_role_id='1000' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `auth` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `auth` WHERE `id` IN ('1','2','3','4','5','6','7','8','9','10','11','12') AND `iframe` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `auth` WHERE `id` IN ('1','2','3','4','5','6','7','8','9','10','11','12') AND `iframe` = 0  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000667s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004307s ]
+
+[ 2018-09-27T15:22:06+08:00 ] ::1 /Nsrms/index.php/Home/Index/info.html?_=1538032926338
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000273s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000493s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001550s ]
+NOTIC: [8] Use of undefined constant MYSQL_VERSION - assumed 'MYSQL_VERSION' D:\php\Nsrms\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003871s ]
+
+[ 2018-09-27T15:22:12+08:00 ] ::1 /Nsrms/Home/Registration/registration
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000287s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001876s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000910s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026845s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012319s ]
+
+[ 2018-09-27T15:22:13+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001592s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0058s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0005s ]
+
+[ 2018-09-27T15:25:36+08:00 ] ::1 /Nsrms/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000402s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003008s ]
+SQL: SHOW COLUMNS FROM `manager` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `manager` WHERE ( user_name='admin' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `role` WHERE ( user_role_id='1000' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `auth` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `auth` WHERE `id` IN ('1','2','3','4','5','6','7','8','9','10','11','12') AND `iframe` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `auth` WHERE `id` IN ('1','2','3','4','5','6','7','8','9','10','11','12') AND `iframe` = 0  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000585s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001729s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043085s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001203s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002054s ]
+
+[ 2018-09-27T15:25:37+08:00 ] ::1 /Nsrms/index.php/Home/Index/info.html?_=1538033136809
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000167s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000617s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001604s ]
+NOTIC: [8] Use of undefined constant MYSQL_VERSION - assumed 'MYSQL_VERSION' D:\php\Nsrms\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003176s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004382s ]
+
+[ 2018-09-27T15:25:40+08:00 ] ::1 /Nsrms/Home/Registration/registration
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000302s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001897s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002529s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000792s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001703s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003163s ]
+
+[ 2018-09-27T15:25:41+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000168s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002284s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0045s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0004s ]
+
+[ 2018-09-27T15:25:42+08:00 ] ::1 /Nsrms/Home/Registration/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000165s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001979s ]
+
+[ 2018-09-27T15:25:42+08:00 ] ::1 /Nsrms/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000281s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002604s ]
+ERR: 非法操作:index
+
+[ 2018-09-27T15:43:56+08:00 ] ::1 /Nsrms/Home/Registration/regislist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000569s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001959s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000469s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039234s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002447s ]
+
+[ 2018-09-27T15:43:57+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000284s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001517s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0047s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0005s ]
+
+[ 2018-09-27T15:43:59+08:00 ] ::1 /Nsrms/Registration/dorms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000190s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001683s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `dorm`  [ RunTime:0.0005s ]
+
+[ 2018-09-27T15:44:09+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000173s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001542s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0074s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `dormvalue` = '前315' LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `registration` WHERE `dormvalue` = '前315' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2018-09-27T15:44:17+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000169s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001632s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0081s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `dormvalue` = 'D107' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `registration` WHERE `dormvalue` = 'D107' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0008s ]
+
+[ 2018-09-27T15:44:21+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000262s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003794s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `dormvalue` = '前315' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `registration` WHERE `dormvalue` = '前315' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0006s ]
+
+[ 2018-09-27T15:44:24+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000154s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001542s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `dormvalue` = 'D112' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `registration` WHERE `dormvalue` = 'D112' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0006s ]
+
+[ 2018-09-27T15:44:28+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001607s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0052s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `zy` WHERE ( xbdm='1' )  [ RunTime:0.0013s ]
+
+[ 2018-09-27T15:44:32+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000161s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002699s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D112' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D112' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0006s ]
+
+[ 2018-09-27T15:44:35+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000239s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003026s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D107' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D107' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0006s ]
+
+[ 2018-09-27T15:44:39+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000173s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001922s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002375s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D110' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D110' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0008s ]
+
+[ 2018-09-27T15:44:42+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001553s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D110' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D110' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0006s ]
+
+[ 2018-09-27T15:44:46+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000240s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002579s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D107' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = 'D107' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0006s ]
+
+[ 2018-09-27T15:44:49+08:00 ] ::1 /Nsrms/Registration/gridlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001620s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0091s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = '前315' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `registration` WHERE `faculty` = '软件学院' AND `major` = '软件技术' AND `dormvalue` = '前315' ORDER BY currenttime asc LIMIT 0,10   [ RunTime:0.0009s ]
+
+[ 2018-09-27T15:51:29+08:00 ] ::1 /Nsrms/Registration/dorms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001739s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `xb` WHERE ( XBMC='软件学院' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `dorm` WHERE ( xbdm='1'and dclass='男' )  [ RunTime:0.0005s ]
+
+[ 2018-09-27T15:51:30+08:00 ] ::1 /Nsrms/Registration/dorms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000299s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001931s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `registration` WHERE ( dormvalue='前315' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dorm` WHERE ( dormvalue='前315' ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-09-27T15:57:45+08:00 ] ::1 /Nsrms/Registration/dorms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000281s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002366s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `xb` WHERE ( XBMC='软件学院' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `dorm` WHERE ( xbdm='1'and dclass='男' )  [ RunTime:0.0006s ]
+
+[ 2018-09-27T15:57:46+08:00 ] ::1 /Nsrms/Registration/dorms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000164s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002951s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `registration` WHERE ( dormvalue='前315' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `dorm` WHERE ( dormvalue='前315' ) LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-09-27T16:12:08+08:00 ] ::1 /Nsrms/Home/Registration/report
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000172s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001860s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000427s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001878s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001183s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001973s ]
+
+[ 2018-09-27T16:12:09+08:00 ] ::1 /Nsrms/Registration/yxcount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000341s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002868s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001807s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0065s ]
+SQL: SELECT `faculty` AS `name`,count(*) AS `value` FROM `registration` GROUP BY faculty  [ RunTime:0.0062s ]
+
+[ 2018-09-27T16:12:10+08:00 ] ::1 /Nsrms/Registration/zycount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000300s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001677s ]
+SQL: SHOW COLUMNS FROM `registration` [ RunTime:0.0077s ]
+SQL: SELECT count(*) as zycount,`major` FROM `registration` GROUP BY major  [ RunTime:0.0064s ]
+
+[ 2018-09-27T16:18:38+08:00 ] ::1 /Nsrms/Home/BaseData/department
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000158s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001792s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000633s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001425s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025381s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002899s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003772s ]
+
+[ 2018-09-27T16:18:39+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000156s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001770s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0052s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0005s ]
+
+[ 2018-09-27T16:18:55+08:00 ] ::1 /Nsrms/Home/BaseData/major
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000457s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001869s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000623s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001382s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034554s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001791s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003440s ]
+
+[ 2018-09-27T16:18:56+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000168s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001771s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0048s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0005s ]
+
+[ 2018-09-27T16:18:59+08:00 ] ::1 /Nsrms/BaseData/getMajorByPageUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000304s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002016s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003175s ]
+NOTIC: [8] Undefined variable: departmentCode D:\php\Nsrms\Application\Home\Controller\BaseDataController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `xb` INNER JOIN zy ON xb.xbdm = zy.xbdm  WHERE ( 1=1 ) LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xb` INNER JOIN zy ON xb.xbdm = zy.xbdm  WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2018-09-27T16:19:15+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000314s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002307s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0043s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `zy` WHERE ( xbdm='2' )  [ RunTime:0.0006s ]
+
+[ 2018-09-27T16:19:17+08:00 ] ::1 /Nsrms/BaseData/getMajorByPageUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001614s ]
+NOTIC: [8] Undefined variable: departmentCode D:\php\Nsrms\Application\Home\Controller\BaseDataController.class.php 第 56 行.
+NOTIC: [8] Undefined variable: departmentCode D:\php\Nsrms\Application\Home\Controller\BaseDataController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `xb` INNER JOIN zy ON xb.xbdm = zy.xbdm  WHERE ( xb.xbdm='2'and zy.zydm='11' ) LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xb` INNER JOIN zy ON xb.xbdm = zy.xbdm  WHERE ( xb.xbdm='2'and zy.zydm='11' ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-09-27T16:22:21+08:00 ] ::1 /Nsrms/Home/BaseData/dorm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001888s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000454s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001429s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030318s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002083s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001789s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003752s ]
+
+[ 2018-09-27T16:22:23+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000339s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002417s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0055s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0022s ]
+
+[ 2018-09-27T16:22:24+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000327s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002694s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0043s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0005s ]
+
+[ 2018-09-27T16:25:58+08:00 ] ::1 /Nsrms/Home/Registration/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000167s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001888s ]
+
+[ 2018-09-27T16:25:58+08:00 ] ::1 /Nsrms/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000167s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002893s ]
+ERR: 非法操作:index
+
+[ 2018-09-27T16:26:00+08:00 ] ::1 /Nsrms/Home/BaseData/dorm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000161s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002257s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000701s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001569s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.023062s ]
+
+[ 2018-09-27T16:26:01+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000170s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003602s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0043s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0004s ]
+
+[ 2018-09-27T16:26:02+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000207s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003163s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0045s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0005s ]
+
+[ 2018-09-27T16:26:07+08:00 ] ::1 /Nsrms/Home/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002938s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000426s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001251s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001008s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001836s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003402s ]
+
+[ 2018-09-27T16:26:16+08:00 ] ::1 /Nsrms/Home/BaseData/department
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001808s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000391s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001687s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002751s ]
+
+[ 2018-09-27T16:26:17+08:00 ] ::1 /Nsrms/Registration/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000156s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001568s ]
+SQL: SHOW COLUMNS FROM `xb` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `zy` [ RunTime:0.0045s ]
+NOTIC: [8] Undefined index: noticeNumber D:\php\Nsrms\Application\Home\Controller\RegistrationController.class.php 第 23 行.
+SQL: SELECT * FROM `xb`  [ RunTime:0.0005s ]
+
+[ 2018-09-27T16:26:21+08:00 ] ::1 /Nsrms/BaseData/getDormByPage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000378s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001540s ]
+SQL: select * from dorm join xb on dorm.xbdm = xb.xbdm where 1=1 [ RunTime:0.0010s ]
+
+[ 2018-09-27T16:26:54+08:00 ] ::1 /Nsrms/BaseData/doSaveDorm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000154s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001653s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0064s ]
+SQL: SELECT `dormvalue` FROM `dorm` WHERE ( dormvalue='a123' )  [ RunTime:0.0006s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\php\Nsrms\Application\Home\Controller\BaseDataController.class.php 第 184 行.
+SQL: INSERT INTO `dorm` (`spec`,`xbdm`,`dormvalue`,`dclass`) VALUES ('8','1','a123','男') [ RunTime:0.0061s ]
+
+[ 2018-09-27T16:26:55+08:00 ] ::1 /Nsrms/BaseData/getDormByPage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000239s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001523s ]
+SQL: select * from dorm join xb on dorm.xbdm = xb.xbdm where 1=1 [ RunTime:0.0008s ]
+
+[ 2018-09-27T16:26:58+08:00 ] ::1 /Nsrms/BaseData/getDormByPage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000485s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+SQL: select * from dorm join xb on dorm.xbdm = xb.xbdm where 1=1 [ RunTime:0.0008s ]
+
+[ 2018-09-27T16:27:08+08:00 ] ::1 /Nsrms/BaseData/getDormByPage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000177s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002495s ]
+SQL: select * from dorm join xb on dorm.xbdm = xb.xbdm where 1=1 [ RunTime:0.0007s ]
+
+[ 2018-09-27T16:27:13+08:00 ] ::1 /Nsrms/BaseData/getDormByPage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000199s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001985s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002284s ]
+SQL: select * from dorm join xb on dorm.xbdm = xb.xbdm where 1=1 [ RunTime:0.0006s ]
+
+[ 2018-09-27T16:28:48+08:00 ] ::1 /Nsrms/BaseData/doSaveDorm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000172s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001757s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0062s ]
+SQL: UPDATE `dorm` SET `spec`='6',`xbdm`='1',`dormvalue`='D107',`dclass`='女' WHERE ( id='1' ) [ RunTime:0.0028s ]
+
+[ 2018-09-27T16:30:23+08:00 ] ::1 /Nsrms/BaseData/doSaveDorm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000245s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001675s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0060s ]
+SQL: SELECT `dormvalue` FROM `dorm` WHERE ( dormvalue='D107' )  [ RunTime:0.0005s ]
+
+[ 2018-09-27T16:30:26+08:00 ] ::1 /Nsrms/BaseData/doSaveDorm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000286s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001806s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0062s ]
+SQL: SELECT `dormvalue` FROM `dorm` WHERE ( dormvalue='D107' )  [ RunTime:0.0005s ]
+
+[ 2018-09-27T16:30:37+08:00 ] ::1 /Nsrms/BaseData/doSaveDorm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001859s ]
+SQL: SHOW COLUMNS FROM `dorm` [ RunTime:0.0064s ]
+SQL: UPDATE `dorm` SET `spec`='8',`xbdm`='1',`dormvalue`='前315',`dclass`='男' WHERE ( id='2' ) [ RunTime:0.0033s ]
+

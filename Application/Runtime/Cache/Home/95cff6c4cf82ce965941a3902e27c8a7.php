@@ -1,0 +1,498 @@
+<?php if (!defined('THINK_PATH')) exit();?><link href="/Nsrms/Public/css/seat.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo JS ?>/jquery.mloading.css" rel="stylesheet" type="text/css"/>
+<style>
+    .disDorm_table{
+        border-collapse:separate;
+        border-spacing:0px 12px;
+        margin:12px auto;
+    }
+    .disDorm_table td{
+        padding:0px 10px 0px 10px;
+    }
+    .dialog-button{
+        text-align: center;
+    }
+</style>
+<div class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'center',border:false">
+        <!-- Begin of toolbar -->
+        <div id="student-toolbar">
+            <div class="wu-toolbar-button">
+                <a class="easyui-linkbutton" href="#" iconcls="icon-reload" onclick="searchon()" plain="true">
+                    刷新
+                </a>
+                <a class="easyui-linkbutton" href="#" iconcls="icon-print" onclick="onreport()" plain="true">
+                    导出
+                </a>
+                <a class="easyui-linkbutton" id="tt"ref="#" iconcls="icon-back" onclick="closeAll()" plain="true">
+                    返回
+                </a>
+            </div>
+            <div class="wu-toolbar-search">
+                <label>
+                    院系：
+                </label>
+                <select class="easyui-combobox" editable="false" id="department" name="q_department" panelheight="auto" style="width:160px;">
+                    <option value="-1">请选择</option>
+                </select>
+                <label>
+                    专业：
+                </label>
+                <select class="easyui-combobox"editable="false" panelheight="auto" id="major" name="major" style="width:160px;">
+                    <option value="-1">请选择</option>
+                </select>
+                <label>
+                    姓名：
+                </label>
+                <input class="easyui-textbox" data-options="prompt:'姓名'" id="studentName" name="q_studentName" style="width:120px;" type="text"/>
+                <label>
+                    寝室：
+                </label>
+                <select class="easyui-combobox" editable="false" id="q_dorm" name="q_dorm" style="width:160px;">
+                    <option value="请选择">请选择</option>
+                </select>
+                <a class="easyui-linkbutton" href="#" iconcls="icon-search" onclick="searchon()" style="margin-left:30px;">
+                    开始检索
+                </a>
+            </div>
+        </div>
+        <!-- End of toolbar -->
+        <table class="easyui-datagrid" id="student-datagrid" toolbar="#student-toolbar">
+        </table>
+    </div>
+</div>
+<div id="dis_dorm-dialog" class="easyui-dialog" data-options="closed:true,iconCls:'icon-save'"
+     style="width:600px; padding:10px;">
+    <form id="disDorm-form" method="post">
+        <table class="disDorm_table">
+            <tr>
+                <td width="20%" align="right">姓名:</td>
+                <td>
+                    <input type="text" name="disDorm_studentname" class="easyui-textbox" readonly="readonly" id="disDorm_studentname" style="width:120px" />
+                </td>
+                <td width="20%" align="right">性别:</td>
+                <td>
+                    <input type="text" name="disDorm_studentsex" class="easyui-textbox" readonly="readonly" id="disDorm_studentsex" style="width:80px" />
+                </td>
+            </tr>
+            <tr>
+                <td width="20%" align="right">院系:</td>
+                <td>
+                    <input type="text" name="disDorm_department" class="easyui-textbox" readonly="readonly" id="disDorm_department" style="width:120px" />
+                </td>
+                <td width="20%" align="right">专业:</td>
+                <td>
+                    <input type="text" name="disDorm_major" class="easyui-textbox" readonly="readonly" id="disDorm_major" style="width:180px" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">寝室:</td>
+                <td colspan="3">
+                    <select class="easyui-combobox" editable="false" id="dis_dorm" name="dis_dorm" style="width:160px;">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center">
+                    <div class="container">
+                        <div class="demo clearfix">
+                            <div class="front"id="front">寝室结构图</div>
+                            <div id="seat_area">
+                            </div>
+                            <div id="legend"></div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</div>
+<link href="/Nsrms/Public/uploaddify/uploadify.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo EASYUI ?>/themes/default/easyui.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo CSS ?>/wu.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo CSS ?>/icon.css" rel="stylesheet" type="text/css"/>
+<script src="<?php echo JS ?>/jquery-3.2.0.min.js" type="text/javascript">
+</script>
+<script src="/Nsrms/Public/uploaddify/jquery.uploadify.min.js" type="text/javascript" >
+</script>
+<!--<script src="/Nsrms/Public/uploaddify/jquery.uploadify.js" type="text/javascript">
+</script>-->
+<!--<script src="<?php echo UPLOADIFY ?>/jquery.uploadify.min.js" type="text/javascript">
+</script>-->
+<script src="<?php echo EASYUI ?>/jquery.easyui.min.js" type="text/javascript">
+</script>
+<script src="<?php echo EASYUI ?>/locale/easyui-lang-zh_CN.js" type="text/javascript">
+</script>
+<script src="<?php echo JS ?>/jquery.form.min.js" type="text/javascript">
+</script>
+<script src="<?php echo JS ?>/aaa.js" type="text/javascript">
+</script>
+
+
+<script src="<?php echo JS ?>/jquery.seat-charts.min.js" type="text/javascript">
+</script>
+<script src="<?php echo JS ?>/jquery.mloading.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+    var amount;
+    var last = '';
+    function searchon() {
+        department = $('#department').combobox('getText');
+        major = $('#major').combobox('getText');
+        studentName = $('#studentName').textbox('getText');
+        dorm = $('#q_dorm').combobox('getText');
+        $('#student-datagrid').datagrid({
+            queryParams: {
+                "xb": department,
+                "zy": major,
+                "name": studentName,
+                "dormd": dorm
+            },
+            url: "<?php echo U('Registration/gridlist','','');?>",
+            rownumbers: true,
+            pagination: true,
+            fitColumns: true,
+            singleSelect: true,
+            fit: true,
+            pageSize: 10,
+            pageList: [10, 50, 100],
+            remoteSort: true,
+            multiSort: true,
+            columns: [[
+                    {field: 'name', title: '姓名', width: 100, align: 'center'},
+                    {field: 'sex', title: '性别', width: 100, align: 'center'},
+                    {field: 'birthdata', title: '出生日期', width: 175, align: 'center'},
+                    {field: 'nation', title: '民族', width: 100, align: 'center'},
+                    {field: 'faculty', title: '院系', width: 100, align: 'center'},
+                    {field: 'major', title: '专业', width: 100, align: 'center'},
+                    {field: 'dormvalue', title: '寝室', width: 100, align: 'center'},
+                    {field: 'currenttime', title: '报到日期', width: 175, align: 'center'},
+                    {field: 'handle', title: '操作', width: 100, align: 'center', formatter: showStudentBtn}
+                ]]
+        });
+    }
+    //显示操作按钮
+    function showStudentBtn(value, row, index) {
+        return "<a href='#' id='disDorm' onclick='addDialog(" + index + ")' class='easyui-linkbutton' name='disDorm'>分配寝室</a>";
+    }
+    //显示对话框
+    function addDialog(rowIndex) {
+//          addDrom();
+        selectedRowIndex = $('#student-datagrid').datagrid('getRowIndex', $('#student-datagrid').datagrid('getSelected'));
+        if (rowIndex == selectedRowIndex) {
+            row = $('#student-datagrid').datagrid('getSelected');
+            if (row) {
+                $('#dis_dorm-dialog').dialog({
+                    closed: false,
+                    modal: true,
+                    title: "分配寝室",
+                    left: 260,
+                    top: 20,
+                    width: 800,
+                    height: 550,
+                    buttons: [{
+                            text: '确定',
+                            iconCls: 'icon-ok',
+                            handler: DisOk
+                        }, {
+                            text: '取消',
+                            iconCls: 'icon-cancel',
+                            handler: function () {
+                                $('#dis_dorm-dialog').dialog('close');
+                            }
+                        }]
+                });
+                //初始化表单中的数据
+                $('#disDorm_studentname').textbox('setValue', row['name']);
+                $('#disDorm_studentsex').textbox('setValue', row['sex']);
+                $('#disDorm_department').textbox('setValue', row['faculty']);
+                $('#disDorm_major').textbox('setValue', row['major']);
+                addDrom(row['dormvalue'], row['dormposition'], row['faculty'], row['sex']);
+                $('#dis_dorm').combobox('setText', row['dormvalue']);
+                if(row['dormvalue']==null||row['dormvalue']==''){
+                     $("#front").html("" + "寝室结构图");
+                      $('#dis_dorm').textbox('setValue',"请选择");
+                    $("#front").html("");
+                }
+                initmap(row['dormvalue'], row['dormposition']);
+            }
+        }
+    }
+    //查询unavailable
+    //寝室 位置
+    function initmap(amount, oldormposition) {
+        $.ajax({
+            url: "<?php echo U('Registration/dorms','','');?>",
+            data: {"data": amount, "datatype": 1},
+            method: "POST",
+            dataType: "json",
+            success: function (data) {
+                map = [];
+                unavailable = []; //寝室人的位置
+                select = [];
+                noname = new Array();
+                for (j = 0; j < data.rows.length; j++) {
+                    if (oldormposition != data.rows[j].dormposition) {
+                        unavailable.push(data.rows[j].dormposition);
+                        noname[data.rows[j].dormposition] = data.rows[j].name;
+                    } else {
+                        select.push(data.rows[j].dormposition);
+                    }
+                }
+                for (i = 1; i <= 2; i++) {
+                    s = '';
+                    for (j = 1; j <= data.amount / 2; j++) {
+                        s = s + "c";
+                    }
+                    map.push(s);
+                }
+                initSeat(map, unavailable, noname, oldormposition, select);
+            }
+        });
+    }
+    function initmaps(amount, oldormposition) {
+        $.ajax({
+            url: "<?php echo U('Registration/dorms','','');?>",
+            data: {"data": amount, "datatype": 1},
+            method: "POST",
+            dataType: "json",
+            success: function (data) {
+                map = [];
+                unavailable = []; //寝室人的位置
+                select = [];
+                noname = new Array();
+                for (j = 0; j < data.rows.length; j++) {
+                    unavailable.push(data.rows[j].dormposition);
+                    noname[data.rows[j].dormposition] = data.rows[j].name;
+                }
+                for (i = 1; i <= 2; i++) {
+                    s = '';
+                    for (j = 1; j <= data.amount / 2; j++) {
+                        s = s + "c";
+                    }
+                    map.push(s);
+                }
+                initSeat(map, unavailable, noname, oldormposition, select);
+            }
+        });
+    }
+
+    function addDrom(amount, oldor, yx, sex) {
+        if (yx != null&& sex != null) {
+            $.ajax({
+                url: "<?php echo U('Registration/dorms','','');?>",
+                data: {"datatype": 4, "yxmc": yx,"sex": sex},
+                method: "post",
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    var combx = [{'text': '请选择', 'value': '0'}];
+                    for (i = 0; i < data.length; i++) {
+                        combx.push({"text": data[i].dormvalue, "value": data[i].dormvalue});
+                    }
+                    $("#dis_dorm").combobox("loadData", combx);
+                }
+            });
+        } else {
+            $.ajax({
+                url: "<?php echo U('Registration/dorms','','');?>",
+                data: {"datatype": 2},
+                method: "post",
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    var combx = [{'text': '请选择', 'value': '0'}];
+                    for (i = 0; i < data.length; i++) {
+                        combx.push({"text": data[i].dormvalue, "value": data[i].dormvalue});
+                    }
+//                $("#dis_dorm").combobox("loadData", combx);
+                    $("#q_dorm").combobox("loadData", combx);
+                }
+            });
+        }
+        $('#dis_dorm').combobox({
+            onChange: function () {
+                y = $("#dis_dorm").combobox("getText");//寝室
+                if (y == '请选择') {
+                    $('#front').empty();
+                    $('#seat_area').empty();
+                } else {
+                    $("#front").html("(" + y + ")" + "寝室结构图");
+                    if (y == amount) {
+                        //y获取行的寝室及      oldor寝室位置
+                        initmap(amount, oldor);
+                    } else {
+                        oldormposition = '';
+                        initmaps(y, oldormposition);
+                    }
+                }
+            }
+        });
+    }
+    //加载二级联动
+    $.ajax({
+        url: "<?php echo U('Registration/select','','');?>",
+        data: {"data": 1},
+        method: "post",
+        dataType: "json",
+        async: false,
+        success: function (datad) {
+            for (i = 0; i < datad.length; i++) {
+                $("#department").append('<option value=' + datad[i].xbdm + '>' + datad[i].xbmc + '</option>');
+            }
+            $('#department').combobox({
+                onChange: function () {
+                    $('#major').empty();
+                    $("#major").append("<option value='-1'>请选择</option>");
+                    var yxvalue = $('#department').combobox('getValue');
+                    if (yxvalue != -1) {
+                        $.ajax({
+                            url: "<?php echo U('Registration/select','','');?>",
+                            data: {"data": "2", "datatype": yxvalue},
+                            method: "POST",
+                            dataType: "json",
+                            success: function (data) {
+                                var themecombo2 = [{'zymc': '请选择', 'zydm': '-1'}];
+                                for (var i = 0; i < data.length; i++) {
+                                    themecombo2.push({"zymc": data[i].zymc, "zydm": data[i].zydm});
+                                }
+                                $('#major').combobox({
+                                    data: themecombo2,
+                                    valueField: 'zydm',
+                                    textField: 'zymc'
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+        }
+    }
+    );
+    function initSeat(map, unavailable, noavailable, oldormposition, select) {
+        sc = $('#seat_area').seatCharts({
+            map: map,
+            naming: {
+                top: false,
+                left: false,
+                getLabel: function (character, row, column) {
+                    if (oldormposition == (row + '_' + column)) {
+                        return '自己';
+                    } else if (oldormposition == '') {
+                        return '空闲';
+                    } else {
+                        return '空闲';
+                    }
+                }
+            },
+            legend: {
+            },
+            click: function () {
+                if (this.status() == 'select') {
+                    if (last != '') {
+                        sc.get(last).status('available');
+                        last = '';
+                    }
+                    $('div[class="seatCharts-seat seatCharts-cell select"]').html('调位');
+                    return 'unselect';
+                } else if (this.status() == 'unselect') {
+                    $('div[class="seatCharts-seat seatCharts-cell unselect"]').html('自己');
+                    return 'select';
+                } else if (this.status() == 'available') {
+                    if (last.length > 0) {
+                        sc.get(last).status('available');
+                    }
+                    last = this.settings.id;
+                    $('div[class="seatCharts-seat seatCharts-cell unselect"]').html('自己');
+                    sc.get(select).status('select');
+                    return 'selected';
+                } else if (this.status() == 'selected') {
+                    last = '';
+                    return 'available';
+                } else if (this.status() == 'unavailable') {
+                    return 'unavailable';
+                } else {
+                    return this.style();
+                }
+            }
+        });
+        sc.get(unavailable).status('unavailable');
+        sc.get(select).status('select');
+        $('div[class="seatCharts-seat seatCharts-cell unavailable"]').html('有人');
+        $('div[class="seatCharts-seat seatCharts-cell unavailable"]').bind("mouseover", function () {
+            id = $(this).attr("id");
+            $(this).prop("title", noavailable[id]);
+        });
+    }
+    //提交
+    function DisOk() {
+        dormvalue = $('#dis_dorm').combobox('getText');
+        studentsname = $('#disDorm_studentname').textbox('getValue');
+        dormposition = last;
+        if (dormvalue != '' && dormposition != '' && dormvalue != '请选择') {
+            $.ajax({
+                url: "<?php echo U('Registration/savedorm','','');?>",
+                data: {"dormvalue": dormvalue, "dormposition": dormposition, "name": studentsname},
+                method: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data > 0) {
+                        $.messager.show({
+                            title: '系统提示',
+                            msg: '操作成功'
+                        });
+                        $('#dis_dorm-dialog').dialog('close');
+                        $('#student-datagrid').datagrid('reload');
+                    }
+                }
+            });
+        } else {
+            $.messager.show({
+                title: '系统提示',
+                msg: '请先选择床位'
+            });
+        }
+
+    }
+    $(function () {
+        addDrom();
+    });
+    function onreport() {
+        rows = $("#student-datagrid").datagrid("getRows");
+        department = $('#department').combobox('getText');
+        major = $('#major').combobox('getText');
+        studentName = $('#studentName').textbox('getText');
+        dorm = $('#q_dorm').combobox('getText');
+        if (rows.length > 0) {
+            $.ajax({
+                url: "<?php echo U('Registration/onreport','','');?>",
+                data: {"department": department, "major": major, "studentName": studentName, "dorm": dorm},
+                datatype: 'json',
+                type: 'post',
+                beforeSend: function () {
+                    $("body").mLoading("show");
+                },
+                complete: function () {
+                    $("body").mLoading("hide");
+                },
+                success: function (data) {
+//                    location.href = "./" + data.url;
+                    try {
+                        var elemIF = document.createElement("iframe");
+                        elemIF.src = "../../" + data.url;
+                        elemIF.style.display = "none";
+                        document.body.appendChild(elemIF);
+                    } catch (e) {
+
+                    }
+                }
+            });
+        } else {
+            $.messager.show({
+                title: '系统提示',
+                msg: '没有可以导出的数据'
+            });
+        }
+    }
+</script>

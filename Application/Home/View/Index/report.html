@@ -1,0 +1,71 @@
+<div style="height:80%;padding:10px;margin:20px auto;">
+    <div class="easyui-panel" style="height:500px;" title="">
+        <table class="info">
+            <tr>
+                <td width="20%">
+                    
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    WEB服务器
+                </td>
+                <td>
+                    {$Think.server.SERVER_SOFTWARE}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    MySQL版本
+                </td>
+                <td>
+                    {$Think.const.PHP_VERSION}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    PHP版本
+                </td>
+                <td>
+                    {$Think.const.mysql_version}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    服务器IP
+                </td>
+                <td>
+                    <?php echo   $_SERVER["SERVER_NAME"] ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    服务器端口
+                </td>
+                <td>
+                    <?php echo $_SERVER['SERVER_PORT']?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    站点物理路径
+                </td>
+                <td>
+                    <?php echo WWWROOT?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    当前登录时间
+                </td>
+                <td>
+                    {$Think.session.now}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<include file="./Application/Home/View/Public/include.html" />
+

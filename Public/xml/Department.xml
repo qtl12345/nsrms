@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Departments>
+  <Department ID="1" DepartmentName="软件学院">软件学院</Department>
+  <Department ID="2" DepartmentName="电子工程学院">电子工程学院</Department>
+  <Department ID="3" DepartmentName="经贸与管理学院">经贸与管理学院</Department>
+  <Department ID="4" DepartmentName="表演与艺术学院">表演与艺术学院</Department>
+</Departments>

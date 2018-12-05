@@ -1,0 +1,95 @@
+.front {
+            width: 340px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            color: #666;
+            text-align: center;
+            padding: 3px;
+            border-radius: 5px;
+            height:25px;
+            font-size:18px;
+            line-height:25px;
+        }
+
+        .booking_area {
+            float: right;
+            position: relative;
+            width: 260px;
+            height: 450px;
+            margin-top: 20px;
+        }
+
+        .booking_area h3 {
+            margin: 5px 5px 0 0;
+            font-size: 16px;
+        }
+
+        .booking_area p {
+            line-height: 26px;
+            font-size: 16px;
+            color: #999
+        }
+
+        .booking_area p span {
+            color: #666
+        }
+
+        div.seatCharts-cell {
+            color: #182C4E;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            margin: 0px 35px auto;
+            float: left;
+            text-align: center;
+            outline: none;
+            font-size: 14px;
+        }
+
+        div.seatCharts-seat {
+            color: #fff;
+            cursor: pointer;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        div.seatCharts-row {
+            height: 45px;
+        }
+
+        div.seatCharts-seat.available {
+            background-color: #76B474;
+        }
+
+        div.seatCharts-seat.focused {
+            background-color: #D48203;
+            border: none;
+        }
+
+        div.seatCharts-seat.selected {
+            background-color: #174DF6;
+        }
+
+        div.seatCharts-seat.unavailable {
+            background-color: #7104A3;
+            cursor: not-allowed;
+        }
+
+        div.seatCharts-seat.select {
+            background-color: #DD4040;
+        }
+
+        div.seatCharts-seat.unselect {
+            background-color: #605D5C;
+        }
+
+        div.seatCharts-container {
+            border-left: 1px dotted #adadad;
+            border-right: 1px dotted #adadad;
+            width: 330px;
+            padding: 19px;
+            margin-left:90px;
+            margin-top:20px;
+            float: left;
+        }

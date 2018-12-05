@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dorms>
+  <!--
+  		TypeId:男女寝室(0：男；1：女)
+  		DormSpec:寝室规格(住几人)
+  		DeptId:所属院系
+  -->
+  <Dorm ID="1" DormName="D310" DormSpec="10" DeptId="1" TypeId="0"></Dorm>
+  <Dorm ID="2" DormName="前508" DormSpec="8" DeptId="1" TypeId="0"></Dorm>
+  <Dorm ID="3" DormName="C307" DormSpec="4" DeptId="1" TypeId="0"></Dorm>
+  <Dorm ID="4" DormName="C313" DormSpec="8" DeptId="1" TypeId="0"></Dorm>
+  <Dorm ID="5" DormName="C317" DormSpec="8" DeptId="1" TypeId="1"></Dorm>
+  <Dorm ID="6" DormName="前416" DormSpec="8" DeptId="1" TypeId="1"></Dorm>
+  <Dorm ID="7" DormName="前604" DormSpec="8" DeptId="1" TypeId="1"></Dorm>
+  <Dorm ID="8" DormName="A118" DormSpec="6" DeptId="2" TypeId="0"></Dorm>
+  <Dorm ID="9" DormName="A319" DormSpec="6" DeptId="2" TypeId="0"></Dorm>
+  <Dorm ID="10" DormName="A507" DormSpec="6" DeptId="2" TypeId="0"></Dorm>
+  <Dorm ID="11" DormName="208" DormSpec="6" DeptId="2" TypeId="0"></Dorm>
+  <Dorm ID="12" DormName="322" DormSpec="8" DeptId="2" TypeId="1"></Dorm>
+  <Dorm ID="13" DormName="413" DormSpec="8" DeptId="2" TypeId="1"></Dorm>
+  <Dorm ID="14" DormName="301" DormSpec="6" DeptId="3" TypeId="0"></Dorm>
+  <Dorm ID="15" DormName="210" DormSpec="6" DeptId="3" TypeId="0"></Dorm>
+  <Dorm ID="16" DormName="221" DormSpec="6" DeptId="3" TypeId="1"></Dorm>
+  <Dorm ID="17" DormName="511" DormSpec="6" DeptId="3" TypeId="1"></Dorm>
+  <Dorm ID="18" DormName="506" DormSpec="8" DeptId="3" TypeId="1"></Dorm>
+  <Dorm ID="19" DormName="308" DormSpec="8" DeptId="3" TypeId="1"></Dorm>
+  <Dorm ID="20" DormName="前521" DormSpec="6" DeptId="4" TypeId="0"></Dorm>
+  <Dorm ID="21" DormName="前615" DormSpec="6" DeptId="4" TypeId="1"></Dorm>
+  <Dorm ID="22" DormName="前205" DormSpec="6" DeptId="4" TypeId="1"></Dorm>
+  <Dorm ID="23" DormName="前419" DormSpec="8" DeptId="4" TypeId="1"></Dorm>
+</Dorms>
